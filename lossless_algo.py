@@ -30,13 +30,13 @@ k = op.iloc[0]
 for i in op:
     if k>i:
         mask = (x<k) & (x>i)
-        val[mask] -= 1
+        val[mask] += 1
     elif k==i:
         mask = (x==k)
-        val[mask] -= 1
+        val[mask] += 1
     else:
         mask = (x>k) & (x<i)
-        val[mask] -= 1
+        val[mask] += 1
     k=i
 
 for i in op:
